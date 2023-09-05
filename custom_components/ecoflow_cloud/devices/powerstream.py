@@ -91,6 +91,12 @@ class PowerStream(BaseDevice):
             # MaxBatteryLevelEntity(client, "upperLimit", "Max Charge Level", 0, 30,
             #                       lambda value: {"moduleType": 0, "operateType": "TCP",
             #                                      "params": {"id": 00, "upperLimit": value}}),
+            #
+            # Beispiel von der Delta 2 Max
+            # MaxBatteryLevelEntity(client, "bms_emsStatus.maxChargeSoc", const.MAX_CHARGE_LEVEL, 50, 100,
+            #                      lambda value: {"moduleType": 2, "operateType": "upsConfig",
+            #                                     "moduleSn": client.device_sn,
+            #                                     "params": {"maxChgSoc": int(value)}}),
         ]
 
     def switches(self, client: EcoflowMQTTClient) -> list[BaseSwitchEntity]:
