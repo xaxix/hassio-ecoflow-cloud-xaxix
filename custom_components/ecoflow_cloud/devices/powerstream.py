@@ -107,4 +107,10 @@ class PowerStream(BaseDevice):
             # DictSelectEntity(client, "supplyPriority", "Power supply mode", {"Prioritize power supply", "Prioritize power storage"},
             #         lambda value: {"moduleType": 00, "operateType": "supplyPriority",
             #                     "params": {"supplyPriority": value}}),
+            #
+            # Beispiel von der Delta 2 Max
+            #             TimeoutDictSelectEntity(client, "pd.lcdOffSec", const.SCREEN_TIMEOUT, const.SCREEN_TIMEOUT_OPTIONS,
+            #                        lambda value: {"moduleType": 1, "operateType": "lcdCfg",
+            #                                       "moduleSn": client.device_sn,
+            #                                       "params": {"brighLevel": 255, "delayOff": value}}),
         ]
